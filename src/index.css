@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    color: rgb(24, 24, 36);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+header {
+    position: relative;
+}
+
+header .logo {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: opacity 350ms ease;
+}
+
+header ul.nav li:hover {
+    opacity: 0.5;
+}
+
+header .shop-cart-button {
+    float: right;
+    cursor: pointer;
+    transition: color, transform 250ms ease;
+    width: 25px;
+    height: 25px;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+    color: #ca5252;
+    transform: scale(1.25);
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    background: #fafafa;
+    -webkit-box-shadow: 10px 10px 10px -5px rgba(122,122,122,0.5); 
+    box-shadow: 10px 10px 10px -5px rgba(122,122,122,0.5);
+    z-index: 1000;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+header .shop-cart .empty h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header .shop-cart .item {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+header .shop-cart .item img {
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+
+header .shop-cart .item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+header .shop-cart .item p {
+    color: #797979;
+    font-weight: 600;
+}
+
+header .shop-cart .item .delete-icon {
+    color: #ca5252;
+    float: right;
+    position: relative;
+    top: -25px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    transition: color, transform 250ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover {
+    color: #d83030;
+    transform: scale(1.25);
+}
+
+header .shop-cart .total {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header .presentation {
+    margin: 50px 0;
+    background: url('./img/banner.jpg') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #bcbcbc3d;
+    position: relative;
+}
+
+header .presentation::after {
+    content: 'Лучшие телефоны';
+    position: absolute;
+    top: 30px;
+    left: 4px;
+    width: 100%;
+    font-size: 60px;
+    font-weight: 600;
+    color: #000000;
+}
+
+header .presentation::before {
+    content: 'По низким ценам!';
+    position: absolute;
+    top: 100px;
+    left: 4px;
+    width: 100%;
+    font-size: 50px;
+    font-weight: lighter;
+    color: #000000;
+}
+
+.categories div {
+    display: inline-block;
+    background: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 250ms ease;
+    font-size: 17px;
+}
+
+.full-item {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #222222be;
+    z-index: 9999;
+    overflow: auto;
+}
+
+.full-item > div {
+    width: 600px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.categories div:hover {
+    border-color: silver;
+    transform: scale(1.05);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #f6f6f6;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+main .item img,
+.full-item img {
+    width: 100%;
+    transition: transform 250ms ease;
+    cursor: pointer;
+}
+
+main .item img:hover, 
+.full-item img:hover {
+    transform: scale(1.05);
+}
+
+main h2, .full-item h2,
+main p, .full-item p,
+main b, .full-item b {
+    margin: 10px 20px;
+    color: #333;
+}
+
+main b, 
+.full-item b {
+    color: rgb(58, 179, 118);
+    font-size: 1.15rem;
+}
+
+main .add-to-cart,
+.full-item .add-to-cart {
+    font-weight: 600;
+    font-size: 1.15rem;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #ca5252;
+    cursor: pointer;
+    transition: transform 250ms ease;
+}
+
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover {
+    transform: scale(1.15);
+}
+
+footer {
+    text-align: center;
+    margin-top: 90px;
+    font-weight: bold;
+}
